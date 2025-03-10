@@ -1,9 +1,9 @@
-import java.util.Scanner;
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // for getting input
+
         Scanner keyboard = new Scanner(System.in);
         // for loop continuation - 1 represents true
         int continueOuterLoop = 1;
@@ -134,18 +134,12 @@ public class Main {
                         continueInnerLoop = keyboard.nextInt();
                     } while (continueInnerLoop == 1);
                     break;
-                /**
-                 * TODO 5: Introduce case 4 to call the writeObjectsToFile method to save the
-                 * object state of the animal into the file
-                 */
+
                 case 4:
                     System.out.println("Write the objects to file");
                     writeObjectsToFile(tigerObject, penguinObject, dolphinObject);
                     break;
-                /**
-                 * TODO 6: Introduce case 5 to call the readObjectsFromFile method to
-                 * fetch the object state of the animal from the file to display on screen
-                 */
+
                 case 5:
                     System.out.println("File read successfully");
                     readObjectsFromFile();
@@ -188,12 +182,7 @@ public class Main {
 
     }
 
-    /**
-     * TODO 3: Write a method named writeObjectsToFile and pass Tiger, Penguin and Dolphin to be saved onto a file.
-     *  TODO 3.a: Save the state of Tiger to output tiger.txt file
-     *  TODO 3.a: Save the state of Penguin to output penguin.txt file
-     *  TODO 3.a: Save the state of Dolphin to output dolphin.txt file
-     */
+
     public static void writeObjectsToFile(Tiger tiger, Penguin penguin, Dolphin dolphin) {
         try {
             ObjectOutputStream oosTiger = new ObjectOutputStream(new FileOutputStream("tiger.txt"));
@@ -208,16 +197,7 @@ public class Main {
         }
     }
 
-    /**
-     * TODO 3: End
-     */
 
-    /**
-     * TODO 4: Read the file tiger.txt, penguin.txt and dolphin.txt
-     * TODO 4.a: Print the save state of Tiger from the file tiger.txt
-     * TODO 4.b: Print the save state of Penguin from the file penguin.txt
-     * TODO 4.c: Print the save state of Dolphin from the file dolphin.txt
-     */
     public static void readObjectsFromFile() {
         try {
             ObjectInputStream oosTiger = new ObjectInputStream(new FileInputStream("tiger.txt"));

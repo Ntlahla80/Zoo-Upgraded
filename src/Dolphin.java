@@ -1,14 +1,9 @@
 import java.io.Serializable;
 
-/**
- * TODO 1.c: Implement serializable interface for class Dolphin
- */
 public class Dolphin extends Animal implements Swim, Serializable {
 
-    // property for color of dolphin
     String color;
 
-    // property for speed of dolphin
     int swimmingSpeed;
 
     public Dolphin() {
@@ -46,9 +41,6 @@ public class Dolphin extends Animal implements Swim, Serializable {
         System.out.println("Dolphin: I am swimming at the speed " + swimmingSpeed);
     }
 
-    /**
-     * TODO 2.c: Override the toString method display the deserialized content after reading the file
-     */
     @Override
     public String toString() {
         return "Dolphin{" +
